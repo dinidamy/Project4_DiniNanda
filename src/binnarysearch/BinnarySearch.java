@@ -51,8 +51,43 @@ public static int med;
          System.out.println(Arrays.toString(Array));
          
          
-        //nanti naro kodenya disini ya, nan. terus apus aja ini comment nya. 
+System.out.print("Masukan Nilai Yang Dicari : ");
+        int x = input.nextInt();
+        boolean notFound = true;
+       
+        System.out.println("======== Hasil ========");
+        
+        int y = 0;
+        int lower = 0;
+        int upper = Banyakarray - 1;
 
+        
+        //Penentu Median / Nilai tengah 
+         if (Banyakarray % 2 == 1){
+             med = (Banyakarray)/2;
+         }
+         else {
+             med = (Banyakarray-1)/2;
+         }
+         
+                             //Pencarian Pada Array
+                                  if (Array[med] <= x) {
+                                  for ( int i = med ; i < Array.length ; i++ ) {
+                                      if (Array[i] == x) {
+                                         System.out.println("Data Ditemukan pada Array ke-" + i);
+                                         y = 1;
+                                         }
+                                     }
+                                  }
+
+                                  if (Array[med] >= x ){
+                                      for ( int k = 0 ; k < med ; k++ ) {
+                                          if (Array[k] == x) {
+                                              System.out.println("Data Ditemukan pada Array ke-" + k);
+                                              y = 1;
+                                          }
+                                    }
+                                 }
 
     }
     
